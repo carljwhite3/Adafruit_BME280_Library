@@ -25,12 +25,6 @@ Adafruit_SPIDevice_Adapter::~Adafruit_SPIDevice_Adapter()
 {
 }
 
-//bool Adafruit_SPIDevice_Adapter::read (uint8_t *buffer, size_t len,
-//                                       bool stop)
-//{
-//    return false;
-//}
-
 bool Adafruit_SPIDevice_Adapter::write (const uint8_t *buffer, size_t len,
                                         const uint8_t *prefix_buffer, size_t prefix_len)
 {

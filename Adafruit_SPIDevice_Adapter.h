@@ -28,8 +28,6 @@ public:
     Adafruit_SPIDevice_Adapter(SPIInterface &interface);
     virtual ~Adafruit_SPIDevice_Adapter();
 
-    //bool read (uint8_t *buffer, size_t len, bool stop=true);
-
     virtual bool write (const uint8_t *buffer, size_t len,
                         const uint8_t *prefix_buffer = nullptr, size_t prefix_len = 0);
 
