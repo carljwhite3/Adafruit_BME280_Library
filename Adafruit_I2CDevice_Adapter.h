@@ -1,5 +1,5 @@
 /*!
- * Copyright (C) 2022 Carl J. White III  
+ * Copyright (C) 2022 Carl J. White III
  *
  * @file Adafruit_BME280.cpp
  *
@@ -28,14 +28,15 @@ public:
     Adafruit_I2CDevice_Adapter(I2CInterface &interface);
     virtual ~Adafruit_I2CDevice_Adapter();
 
-    bool write (const uint8_t *buffer, size_t len, bool stop=true,
-                const uint8_t *prefix_buffer=nullptr,
-                size_t prefix_len=0);
+    virtual bool write (const uint8_t *buffer, size_t len, bool stop=true,
+                        const uint8_t *prefix_buffer=nullptr,
+                        size_t prefix_len=0);
 
-    bool write_then_read (const uint8_t *write_buffer, size_t write_len,
-                          uint8_t *read_buffer, size_t read_len,
-                          bool stop=false);
-private:
+    virtual bool write_then_read (const uint8_t *write_buffer, size_t write_len,
+                                  uint8_t *read_buffer, size_t read_len,
+                                  bool stop=false);
+
+protected:
     I2CInterface &interface;
 
 };

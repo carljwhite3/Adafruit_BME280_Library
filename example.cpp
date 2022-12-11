@@ -12,7 +12,7 @@ int main(int argc, char **argv)
     Adafruit_I2CDevice_Adapter adapter(device);
 
     Adafruit_BME280 sensor(adapter);
-    
+
     if (sensor.begin())
     {
         cout << "Temperature = " << sensor.readTemperature() << " C" << endl;

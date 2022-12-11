@@ -32,17 +32,14 @@ Adafruit_SPIDevice_Adapter::~Adafruit_SPIDevice_Adapter()
 //}
 
 bool Adafruit_SPIDevice_Adapter::write (const uint8_t *buffer, size_t len,
-                                        bool stop,
-                                        const uint8_t *prefix_buffer,
-                                        size_t prefix_len)
+                                        const uint8_t *prefix_buffer, size_t prefix_len)
 {
     return false;
 }
 
-bool Adafruit_SPIDevice_Adapter::write_then_read (const uint8_t *write_buffer,
-        size_t write_len,                                                                                                       uint8_t *read_buffer,
-        size_t read_len,
-        bool stop)
+bool Adafruit_SPIDevice_Adapter::write_then_read (const uint8_t *write_buffer, size_t write_len,
+        uint8_t *read_buffer, size_t read_len,
+        uint8_t sendvalue)
 {
     return false;
 }
