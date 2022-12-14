@@ -37,15 +37,16 @@ bool Adafruit_I2CDevice_Adapter::write (const uint8_t *buffer, size_t len,
     if (len == 2)
     {
         interface.writeReg8(buffer[0], buffer[1]);
+        return true;
     }
 
-    return true;
+    return false;
 }
 
 bool Adafruit_I2CDevice_Adapter::write_then_read (const uint8_t *write_buffer, 
-		                                  size_t write_len,
+                                                  size_t write_len,
                                                   uint8_t *read_buffer, 
-						  size_t read_len,
+                                                  size_t read_len,
                                                   bool stop)
 {
     if (write_len == 1)
@@ -56,8 +57,10 @@ bool Adafruit_I2CDevice_Adapter::write_then_read (const uint8_t *write_buffer,
         {
             read_buffer[i] = interface.readReg8(reg + i);
         }
+        
+        return true;
     }
 
-    return true;
+    return false;
 }
 

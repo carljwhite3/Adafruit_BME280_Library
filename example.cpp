@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#define SEALEVELPRESSURE_HPA (1013.25)
+
 using namespace std;
 
 int main(int argc, char **argv)
@@ -18,7 +20,7 @@ int main(int argc, char **argv)
         cout << "Temperature = " << sensor.readTemperature() << " C" << endl;
         cout << "Pressure = " << sensor.readPressure()/100 <<" hPa" << endl;
         cout << "Humidity = " << sensor.readHumidity() << " %" << endl;
-        cout << "Altitude = " << sensor.readAltitude(1013.25) << " m" << endl;
+        cout << "Altitude = " << sensor.readAltitude(SEALEVELPRESSURE_HPA) << " m" << endl;
     }
 
     return 0;
