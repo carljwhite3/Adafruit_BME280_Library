@@ -18,6 +18,7 @@ int main(int argc, char **argv)
         cout << "Temperature = " << sensor.readTemperature() << " C" << endl;
         cout << "Pressure = " << sensor.readPressure()/100 <<" hPa" << endl;
         cout << "Humidity = " << sensor.readHumidity() << " %" << endl;
+        cout << "Altitude = " << sensor.readAltitude(1013.25) << " m" << endl;
     }
 
     return 0;
